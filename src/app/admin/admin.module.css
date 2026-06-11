@@ -1,0 +1,160 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--background);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--foreground);
+}
+
+.homeLink {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color var(--transition-fast);
+}
+
+.homeLink:hover {
+  color: white;
+}
+
+/* Metrics */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metricCard {
+  background: var(--secondary);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.metricIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricIcon.blue { background: rgba(67, 97, 238, 0.1); color: var(--primary); }
+.metricIcon.green { background: rgba(16, 185, 129, 0.1); color: var(--success); }
+.metricIcon.orange { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
+.metricIcon.red { background: rgba(239, 68, 68, 0.1); color: var(--danger); }
+
+.metricInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.metricLabel {
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+
+/* Table Area */
+.tableSection {
+  background: var(--secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+}
+
+.tableHeader {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.tableTitle {
+  font-size: 1.25rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.filterSelect {
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--glass-border);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  outline: none;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.table th {
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.table tr:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Badges */
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.badge.jobReady { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+.badge.training { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+.badge.manual { background: rgba(67, 97, 238, 0.2); color: var(--primary); }
+.badge.flagged { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+
+.actionLink {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.actionLink:hover {
+  text-decoration: underline;
+}
